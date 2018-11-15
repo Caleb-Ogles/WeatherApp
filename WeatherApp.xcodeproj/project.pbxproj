@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B0B87A6A117D5D73054DEBDA /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CA7E6C450BFB6DFD387DF1 /* Pods_WeatherApp.framework */; };
+		BF2DBB71219CA68F00558B2D /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DBB70219CA68F00558B2D /* APIKeys.swift */; };
+		BF2DBB73219CA9DA00558B2D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DBB72219CA9DA00558B2D /* Location.swift */; };
+		BF2DBB75219CAAD000558B2D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DBB74219CAAD000558B2D /* APIManager.swift */; };
 		BF4FBC80219CA184006141A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FBC7F219CA184006141A9 /* AppDelegate.swift */; };
 		BF4FBC82219CA184006141A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FBC81219CA184006141A9 /* ViewController.swift */; };
 		BF4FBC85219CA184006141A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4FBC83219CA184006141A9 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 		19CA7E6C450BFB6DFD387DF1 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		708BB9EC8708D998970E19D2 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		A63E7A69ECD06C50950A4E21 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BF2DBB70219CA68F00558B2D /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		BF2DBB72219CA9DA00558B2D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BF2DBB74219CAAD000558B2D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		BF4FBC7C219CA184006141A9 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4FBC7F219CA184006141A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF4FBC81219CA184006141A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF2DBB6F219CA64F00558B2D /* APIKeys */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DBB74219CAAD000558B2D /* APIManager.swift */,
+				BF2DBB70219CA68F00558B2D /* APIKeys.swift */,
+			);
+			path = APIKeys;
+			sourceTree = "<group>";
+		};
 		BF4FBC73219CA184006141A9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +93,9 @@
 		BF4FBC7E219CA184006141A9 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF2DBB6F219CA64F00558B2D /* APIKeys */,
 				BF4FBC7F219CA184006141A9 /* AppDelegate.swift */,
+				BF2DBB72219CA9DA00558B2D /* Location.swift */,
 				BF4FBC81219CA184006141A9 /* ViewController.swift */,
 				BF4FBC83219CA184006141A9 /* Main.storyboard */,
 				BF4FBC86219CA185006141A9 /* Assets.xcassets */,
@@ -202,7 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2DBB71219CA68F00558B2D /* APIKeys.swift in Sources */,
 				BF4FBC82219CA184006141A9 /* ViewController.swift in Sources */,
+				BF2DBB75219CAAD000558B2D /* APIManager.swift in Sources */,
+				BF2DBB73219CA9DA00558B2D /* Location.swift in Sources */,
 				BF4FBC80219CA184006141A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
