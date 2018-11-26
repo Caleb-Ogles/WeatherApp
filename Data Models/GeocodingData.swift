@@ -33,19 +33,23 @@ class GeocodingData {
     convenience init?(json: JSON) {
         guard let results = json[GeocodingDataKeys.results.rawValue].array,
             results.count > 0 else {
+                print("not getting results")
                 return nil
         }
         
         guard let formattedAddress = results[0][GeocodingDataKeys.formattedAddress.rawValue].string
             else {
+                print("not getting formattedAddress")
                 return nil
         }
         
         guard let latitude = results[0][GeocodingDataKeys.geometry.rawValue][GeocodingDataKeys.location.rawValue][GeocodingDataKeys.latitude.rawValue].double else {
+            print("not getting latitude")
             return nil
         }
         
         guard let longitude = results[0][GeocodingDataKeys.geometry.rawValue][GeocodingDataKeys.location.rawValue][GeocodingDataKeys.longitude.rawValue].double else {
+            print("not getting longitude")
             return nil
         }
         

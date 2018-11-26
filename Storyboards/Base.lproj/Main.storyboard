@@ -39,7 +39,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pst-9p-PSK">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pst-9p-PSK">
                                         <rect key="frame" x="101" y="215.5" width="173.5" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-100°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0N-Ll-ZsL">
@@ -98,6 +98,7 @@
                         <outlet property="currentTemperatureLabel" destination="11d-wJ-6xf" id="ep8-S4-7zl"/>
                         <outlet property="highTemperatureLabel" destination="aBN-6J-Jdd" id="b2u-fj-ZFv"/>
                         <outlet property="iconLabel" destination="FVG-u9-NBJ" id="8mY-d1-YJz"/>
+                        <outlet property="locationLabel" destination="Q19-vw-E4j" id="HBo-GO-nS7"/>
                         <outlet property="lowTemperatureLabel" destination="a0N-Ll-ZsL" id="U5I-hj-51h"/>
                     </connections>
                 </viewController>
@@ -132,9 +133,11 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="aL0-0k-3MB" id="g5b-Tr-aJw"/>
+                        <segue destination="JYV-xC-ndl" kind="unwind" identifier="unwindToWeatherDisplay" unwindAction="unwindToWeatherDisplayWithSegue:" id="VBp-VM-92M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTh-IA-z8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JYV-xC-ndl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1864.8" y="133.5832083958021"/>
         </scene>

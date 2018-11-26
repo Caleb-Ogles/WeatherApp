@@ -18,7 +18,7 @@ struct APIManager {
         case invalidData
     }
     
-    static func getWeather(at location: location, onComplete: @escaping (WeatherData?, Error?) -> Void) {
+    func getWeather(at location: location, onComplete: @escaping (WeatherData?, Error?) -> Void) {
         
         let root = "https://api.darksky.net/forecast/"
         
@@ -43,11 +43,11 @@ struct APIManager {
         
     }
     
-    static func geocode(address: String, onCompletion: @escaping (GeocodingData?, Error?) -> Void) {
+    func geocode(address: String, onCompletion: @escaping (GeocodingData?, Error?) -> Void) {
         
         let googleURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
         
-        let geoURL = googleURL + address + "&key" + APIKeys.GeocodingAPIKey
+        let geoURL = googleURL + address + "&key=" + APIKeys.GeocodingAPIKey
         
         let request = Alamofire.request(geoURL)
         
@@ -60,7 +60,6 @@ struct APIManager {
                 } else {
                     onCompletion(nil, APIErrors.invalidData)
                 }
-                print(json)
             case .failure(let error):
                 onCompletion(nil, error)
             }

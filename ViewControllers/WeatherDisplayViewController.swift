@@ -13,6 +13,7 @@ import SwiftyJSON
 
 class WeatherDisplayViewController: UIViewController {
     
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var iconLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var lowTemperatureLabel: UILabel!
@@ -27,25 +28,26 @@ class WeatherDisplayViewController: UIViewController {
         }
     }
     
+    var displayGeocodingData: GeocodingData! {
+        didSet {
+            locationLabel.text = displayGeocodingData.formattedAddress
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let latitude = 36.9959
-        let longitude = -85.9119
-        
-//        APIManager.getWeather(at: (latitude, longitude)) { weatherData, error in
-//            if let recievedData = weatherData {
-//                self.displayWeatherData = recievedData
-//
-//            }
-//
-//            if let error = error {
-//                print(error.localizedDescription)
-//            }
-//
-//        }
+        setupDefaultUI()
         
     }
+    
+    func setupDefaultUI() {
+        locationLabel.text = ""
+        iconLabel.text = "😐"
+        currentTemperatureLabel.text = "Enter a location"
+        highTemperatureLabel.text = "-"
+        lowTemperatureLabel.text = "-"
+    }
+    
+    @IBAction func unwindToWeatherDisplay(segue: UIStoryboardSegue) { }
     
 }

@@ -98,8 +98,6 @@ class WeatherData {
             return nil
         }
         
-        print(conditionString)
-        
         guard let condition = Condition(rawValue: conditionString) else {
             print("Couldn't init condition")
             return nil
