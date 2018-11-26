@@ -10,6 +10,7 @@ import Foundation
 
 struct APIKeys {
     
+    //darksky api key to allow a call
     static let darkSkyAPIKey = "05eeaf71757d6084665b7484ac588e75"
     
     
